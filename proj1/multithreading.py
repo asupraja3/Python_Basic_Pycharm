@@ -25,3 +25,14 @@ t1.join() #Wait for t1 to finish
 t2.join() #Wait for t2 to finish
 
 print("last Bye") #Main prints this after t1 and t2 finish
+
+# This code demonstrates the use of multithreading in Python using functions
+import threading
+
+def print_numbers():
+    for i in range(5):
+        print(i)
+
+t1 = threading.Thread(target=print_numbers)
+t1.start()
+t1.join()
